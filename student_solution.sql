@@ -1,18 +1,22 @@
-use VIBEDB;
-CREATE TABLE employee
-(
-employeeID int,
-employeename VARCHAR(20),
-Department VARCHAR(20),
-salary int
+CREATE TABLE Employee (
+    EmployeeID INT PRIMARY KEY,
+    EmployeeName VARCHAR(100),
+    Department VARCHAR(50),
+    Salary INT
 );
-INSERT INTO employee VALUES
-(101,'ravi','HR',25000),
-(102,'meena','IT',40000),
-(103,'kumar','finance',35000),
-(104,'suresh','IT',45000),
-(105,'latha','HR',30000);
-SELECT COUNT(salary)AS totalemployee FROM employee;
-SELECT MAX(salary)AS maximumsalary FROM employee;
-SELECT MIN(salary)AS minimumsalary FROM employee;
-SELECT AVG(salary)AS averagesalary FROM employee;
+
+INSERT INTO Employee (EmployeeID, EmployeeName, Department, Salary)
+VALUES
+(101, 'Ravi', 'HR', 25000),
+(102, 'Meena', 'IT', 40000),
+(103, 'Kumar', 'Finance', 35000),
+(104, 'Suresh', 'IT', 45000),
+(105, 'Latha', 'HR', 30000);
+
+SELECT COUNT(*) AS TotalEmployees FROM Employee;
+
+SELECT MAX(Salary) AS MaximumSalary FROM Employee;
+
+SELECT MIN(Salary) AS MinimumSalary FROM Employee;
+
+SELECT AVG(Salary) AS AverageSalary FROM Employee;
